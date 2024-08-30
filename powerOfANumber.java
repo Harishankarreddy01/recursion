@@ -6,21 +6,22 @@ class powerOfANumber{
     }
 
     static long power(int base, int exponent){
-        int mod = 1000000007;
+        int modd = 1000000007;
         if(exponent==0)
             return 1;
         
         long halfpower = power(base,exponent/2);
-        long halfpowersquared = (halfpower * halfpower)%mod;
+        long halfpowersquared = (halfpower * halfpower)%modd;
 
         if(exponent%2 == 0){
             return halfpowersquared;
         }
         else
-            return (base * halfpowersquared)%mod;
+            return (base * halfpowersquared)%modd;
 
     }
 
+    //To reverse the number
     static int reverse(int Number){
         int reverse = 0;
 
